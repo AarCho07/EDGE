@@ -1,28 +1,4 @@
-"""
-ISO-NE & NYISO Preliminary Real-Time Five-Minute LMP Downloader
-----------------------------------------------------------------
-Uses the open-source `gridstatus` library to pull ISO-NE and NYISO
-5-minute LMP data automatically every 2 minutes. No account required.
 
-Install dependencies:
-    pip install gridstatus pandas
-
-Usage:
-    python isone_download_5min_lmp.py
-
-Output:
-    - Timestamped CSVs saved to ./downloads/
-    - Master files: isone_5min_lmp_MASTER.csv, nyiso_5min_lmp_MASTER.csv
-
-Location options (edit LOCATIONS below):
-    "ALL"                  → every hub, zone, and interface
-    ["H.INTERNAL_HUB"]    → ISO-NE Hub only
-    [".Z.MAINE", ".Z.CONNECTICUT", ...]  → specific load zones
-
-All available ISO-NE zones:
-    .Z.MAINE, .Z.NEWHAMPSHIRE, .Z.VERMONT, .Z.CONNECTICUT,
-    .Z.RHODEISLAND, .Z.SEMASS, .Z.WCMASS, .Z.NEMASSBOST
-"""
 
 import os
 import sys
