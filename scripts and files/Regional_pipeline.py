@@ -12,7 +12,7 @@ DATA_TYPE = "pal"             # 'pal' tracks real-time electricity demand/load
 
 def download_monthly_load(date_str, data_type="pal"):
     """
-    Downloads a single monthly zip file from NYISO for actual load data,
+    Downloads a single monthly zip file from NY ISO for actual load data,
     extracts the CSVs directly into memory, and returns a unified DataFrame.
     """
     url = f"https://mis.nyiso.com/public/csv/{data_type}/{date_str}{data_type}_csv.zip"
@@ -79,7 +79,7 @@ if __name__ == "__main__":
         print("="*50 + "\n")
         
         if user_selection not in unique_locations:
-            print(f"Error: '{user_selection}' was not found. Check spelling and matching capitalization.")
+            print(f"Error: '{user_selection}' was not found. Check spelling and matching capitalization. Re run the script to try again.")
             exit()
             
         # Step 4: Filter rows for user selection
